@@ -1,0 +1,11 @@
+.main_header{
+    grid-area: header;
+    background: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.main_header .logo img{
+    max-width: 100px;
+}
