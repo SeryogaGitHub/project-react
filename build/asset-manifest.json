@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/project-react/static/css/main.4184deb2.chunk.css",
+    "main.js": "/project-react/static/js/main.b7dcade2.chunk.js",
+    "main.js.map": "/project-react/static/js/main.b7dcade2.chunk.js.map",
+    "runtime~main.js": "/project-react/static/js/runtime~main.2f328978.js",
+    "runtime~main.js.map": "/project-react/static/js/runtime~main.2f328978.js.map",
+    "static/js/2.1a250e5e.chunk.js": "/project-react/static/js/2.1a250e5e.chunk.js",
+    "static/js/2.1a250e5e.chunk.js.map": "/project-react/static/js/2.1a250e5e.chunk.js.map",
+    "static/js/3.cf97c1a0.chunk.js": "/project-react/static/js/3.cf97c1a0.chunk.js",
+    "static/js/3.cf97c1a0.chunk.js.map": "/project-react/static/js/3.cf97c1a0.chunk.js.map",
+    "index.html": "/project-react/index.html",
+    "precache-manifest.36446d3b61b91c2bd421b4f6b9138a5c.js": "/project-react/precache-manifest.36446d3b61b91c2bd421b4f6b9138a5c.js",
+    "service-worker.js": "/project-react/service-worker.js",
+    "static/css/main.4184deb2.chunk.css.map": "/project-react/static/css/main.4184deb2.chunk.css.map",
+    "static/media/preloader.gif": "/project-react/static/media/preloader.1d7626e6.gif"
+  }
+}
