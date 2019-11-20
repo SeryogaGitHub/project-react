@@ -1,21 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Preloader from '../../../common/preloader/preloader';
 import defaultImage from '../../../assect/img/default-user.png';
 import ProfileStatusWithHook from "./ProfileStausWithHook";
+import ProfileDataForm from "./ProfileDataForm";
+import ProfileData from "./ProfileData";
 
 const ProfileInfo = React.memo(props => {
+  let [editMode, setEditMode] = useState(false);
+
   if(!props.profile){
     return <Preloader/>
   }
-
-  const {photos, aboutMe, fullName} = props.profile;
+  const {photos} = props.profile;
   const {status, updateStatus} = props;
+
+  const goToEditMode = () => {
+    setEditMode(true);
+  };
+
   return(
     <div className="account">
       <img src={photos.large ? photos.large : defaultImage} alt={'alt'}/>
 
-      <p>Про мене: {aboutMe}</p>
-      <p>Имя: {fullName}</p>
+      {editMode ? <ProfileDataForm profile={props.profile} />
+                : <ProfileData goToEditMode={goToEditMode} profile={props.profile}/>
+      }
+
 
       <div>
         <ProfileStatusWithHook status={status} updateStatus={updateStatus}/>
