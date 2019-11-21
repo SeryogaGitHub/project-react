@@ -71,7 +71,7 @@ nav li + li {
 .active-link {
   color: brown;
 }
-div.default + div.default{
+.default + .default{
   margin-top: 15px;
 }
 div.default > input, div.default > textarea, div.default > .btn {

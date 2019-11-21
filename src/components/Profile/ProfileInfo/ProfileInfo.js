@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import Preloader from '../../../common/preloader/preloader';
 import defaultImage from '../../../assect/img/default-user.png';
 import ProfileStatusWithHook from "./ProfileStausWithHook";
-import ProfileDataForm from "./ProfileDataForm";
 import ProfileData from "./ProfileData";
+import ProfileDataFormReduxForm from "./ProfileDataForm";
 
 const ProfileInfo = React.memo(props => {
   let [editMode, setEditMode] = useState(false);
@@ -18,11 +18,19 @@ const ProfileInfo = React.memo(props => {
     setEditMode(true);
   };
 
+  const disableEditMode = () => {
+    setEditMode(false);
+  };
+
+  const onSubmit = (formData) => {
+    console.log(formData);
+  };
+
   return(
     <div className="account">
       <img src={photos.large ? photos.large : defaultImage} alt={'alt'}/>
 
-      {editMode ? <ProfileDataForm profile={props.profile} />
+      {editMode ? <ProfileDataFormReduxForm onSubmit={onSubmit} disableEditMode={disableEditMode} profile={props.profile} />
                 : <ProfileData goToEditMode={goToEditMode} profile={props.profile}/>
       }
 

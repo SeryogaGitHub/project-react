@@ -1,9 +1,46 @@
 import React from "react";
+import {createField, Input, Textarea} from "../../../common/form/FormsControls";
+import {required} from "../../../utils/validators/validators";
+import {reduxForm} from "redux-form";
 
 const ProfileDataForm = (props) => {
+  const {disableEditMode} = props.profile;
+  const {handleSubmit} = props;
+
   return(
-    <div>form</div>
+    <form onSubmit={handleSubmit} className={'default'}>
+      <br/>
+
+      <div className={'default'}>
+        <button onClick={ disableEditMode }>Зберегти профіль</button>
+      </div>
+
+      <div className={'default'}>
+        <strong>Про мене:</strong>
+        {createField("", 'about-me', Input)}
+      </div>
+
+      <div className={'default'}>
+        <strong>Имя:</strong>
+        {createField("", 'name', Input)}
+      </div>
+
+      <div className={'default'}>
+        <strong>Роботу шукаю:</strong>
+        {createField("", 'looking-for-job', Input, [], {type: 'checkbox'})}
+      </div>
+
+      <div className={'default'}>
+        <strong>Описання роботи:</strong>
+        {createField("", 'lookingForAJobDescription', Textarea)}
+      </div>
+
+      <br/>
+
+      {/*<p><strong>Соцмережі:</strong></p> {Object.keys(contacts).map(key => {*/}
+      {/*return <Contacts key={key} contactTitle={key} contactValue={contacts[key] ? contacts[key] : "-"}/>*/}
+    </form>
   );
 };
-
-export default ProfileDataForm;
+const ProfileDataFormReduxForm = reduxForm({form: 'edit-profile'})(ProfileDataForm);
+export default ProfileDataFormReduxForm;

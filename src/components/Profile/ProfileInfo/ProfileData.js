@@ -6,7 +6,9 @@ const ProfileData = (props) => {
 
   return(
     <div>
-      <button onClick={ goToEditMode }>Редагувати</button>
+      <br/>
+
+      <button onClick={ goToEditMode }>Редагувати профіль</button>
 
       <p><strong>Про мене:</strong> {aboutMe}</p>
       <p><strong>Имя:</strong> {fullName}</p>
