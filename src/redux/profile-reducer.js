@@ -67,4 +67,13 @@ export const updateStatus = (status) => async (dispatch) => {
   }
 };
 
+export const saveProfile = (profile) => async (dispatch) => {
+  let response = await profileAPI.saveProfile(profile);
+
+  debugger;
+  if(!response.data.resultCode){
+    // dispatch(setStatus(status));
+  }
+};
+
 export default profileReducer;

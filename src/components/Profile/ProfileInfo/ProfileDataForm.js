@@ -1,6 +1,5 @@
 import React from "react";
 import {createField, Input, Textarea} from "../../../common/form/FormsControls";
-import {required} from "../../../utils/validators/validators";
 import {reduxForm} from "redux-form";
 
 const ProfileDataForm = (props) => {
@@ -17,17 +16,17 @@ const ProfileDataForm = (props) => {
 
       <div className={'default'}>
         <strong>Про мене:</strong>
-        {createField("", 'about-me', Input)}
+        {createField("", 'aboutMe', Input)}
       </div>
 
       <div className={'default'}>
         <strong>Имя:</strong>
-        {createField("", 'name', Input)}
+        {createField("", 'fullName', Input)}
       </div>
 
       <div className={'default'}>
         <strong>Роботу шукаю:</strong>
-        {createField("", 'looking-for-job', Input, [], {type: 'checkbox'})}
+        {createField("", 'lookingForAJob', Input, [], {type: 'checkbox'})}
       </div>
 
       <div className={'default'}>

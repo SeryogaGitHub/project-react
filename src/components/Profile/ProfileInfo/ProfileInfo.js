@@ -12,7 +12,7 @@ const ProfileInfo = React.memo(props => {
     return <Preloader/>
   }
   const {photos} = props.profile;
-  const {status, updateStatus} = props;
+  const {status, updateStatus, saveProfile} = props;
 
   const goToEditMode = () => {
     setEditMode(true);
@@ -23,7 +23,7 @@ const ProfileInfo = React.memo(props => {
   };
 
   const onSubmit = (formData) => {
-    console.log(formData);
+    saveProfile(formData);
   };
 
   return(
