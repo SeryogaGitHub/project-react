@@ -3,15 +3,14 @@ import {createField, Input, Textarea} from "../../../common/form/FormsControls";
 import {reduxForm} from "redux-form";
 
 const ProfileDataForm = (props) => {
-  const {disableEditMode} = props.profile;
-  const {handleSubmit} = props;
+  const {handleSubmit, disableEditMode, profile} = props;
 
   return(
     <form onSubmit={handleSubmit} className={'default'}>
       <br/>
 
       <div className={'default'}>
-        <button onClick={ disableEditMode }>Зберегти профіль</button>
+        <button onClick={disableEditMode}>Зберегти профіль</button>
       </div>
 
       <div className={'default'}>
@@ -36,8 +35,13 @@ const ProfileDataForm = (props) => {
 
       <br/>
 
-      {/*<p><strong>Соцмережі:</strong></p> {Object.keys(contacts).map(key => {*/}
-      {/*return <Contacts key={key} contactTitle={key} contactValue={contacts[key] ? contacts[key] : "-"}/>*/}
+      <p><strong>Соцмережі:</strong></p>
+      {Object.keys(profile.contacts).map(key => {
+        return <div key={key} className={'default'}>
+          <strong>{key}</strong>
+          {createField("", 'contacts.' + key, Input)}
+        </div>;
+      })}
     </form>
   );
 };

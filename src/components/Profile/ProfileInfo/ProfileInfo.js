@@ -6,12 +6,13 @@ import ProfileData from "./ProfileData";
 import ProfileDataFormReduxForm from "./ProfileDataForm";
 
 const ProfileInfo = React.memo(props => {
+  let {profile} = props;
   let [editMode, setEditMode] = useState(false);
 
-  if(!props.profile){
+  if(!profile){
     return <Preloader/>
   }
-  const {photos} = props.profile;
+  const {photos} = profile;
   const {status, updateStatus, saveProfile} = props;
 
   const goToEditMode = () => {
@@ -23,15 +24,23 @@ const ProfileInfo = React.memo(props => {
   };
 
   const onSubmit = (formData) => {
+    console.log(formData);
     saveProfile(formData);
+    setEditMode(true);
   };
 
   return(
     <div className="account">
       <img src={photos.large ? photos.large : defaultImage} alt={'alt'}/>
 
-      {editMode ? <ProfileDataFormReduxForm onSubmit={onSubmit} disableEditMode={disableEditMode} profile={props.profile} />
-                : <ProfileData goToEditMode={goToEditMode} profile={props.profile}/>
+      {editMode ? <ProfileDataFormReduxForm
+                    onSubmit={onSubmit}
+                    disableEditMode={disableEditMode}
+                    initialValues={profile}
+                    profile={profile}
+                  />
+
+                : <ProfileData goToEditMode={goToEditMode} profile={profile}/>
       }
 
 

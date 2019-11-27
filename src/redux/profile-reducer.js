@@ -67,12 +67,12 @@ export const updateStatus = (status) => async (dispatch) => {
   }
 };
 
-export const saveProfile = (profile) => async (dispatch) => {
+export const saveProfile = (profile) => async (dispatch,getState) => {
+  const userId = getState().auth.userId;
   let response = await profileAPI.saveProfile(profile);
 
-  debugger;
   if(!response.data.resultCode){
-    // dispatch(setStatus(status));
+    dispatch(getUserProfile(userId));
   }
 };
 

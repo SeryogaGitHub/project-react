@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/project-react/static/css/main.4184deb2.chunk.css",
-    "main.js": "/project-react/static/js/main.477111cd.chunk.js",
-    "main.js.map": "/project-react/static/js/main.477111cd.chunk.js.map",
-    "runtime~main.js": "/project-react/static/js/runtime~main.2f328978.js",
-    "runtime~main.js.map": "/project-react/static/js/runtime~main.2f328978.js.map",
-    "static/js/2.572e80ad.chunk.js": "/project-react/static/js/2.572e80ad.chunk.js",
-    "static/js/2.572e80ad.chunk.js.map": "/project-react/static/js/2.572e80ad.chunk.js.map",
-    "static/js/3.cf97c1a0.chunk.js": "/project-react/static/js/3.cf97c1a0.chunk.js",
-    "static/js/3.cf97c1a0.chunk.js.map": "/project-react/static/js/3.cf97c1a0.chunk.js.map",
+    "main.css": "/project-react/static/css/main.716ee704.chunk.css",
+    "main.js": "/project-react/static/js/main.271f0581.chunk.js",
+    "main.js.map": "/project-react/static/js/main.271f0581.chunk.js.map",
+    "runtime~main.js": "/project-react/static/js/runtime~main.4cb33080.js",
+    "runtime~main.js.map": "/project-react/static/js/runtime~main.4cb33080.js.map",
+    "static/js/2.80c62180.chunk.js": "/project-react/static/js/2.80c62180.chunk.js",
+    "static/js/2.80c62180.chunk.js.map": "/project-react/static/js/2.80c62180.chunk.js.map",
+    "static/js/3.60f7fb90.chunk.js": "/project-react/static/js/3.60f7fb90.chunk.js",
+    "static/js/3.60f7fb90.chunk.js.map": "/project-react/static/js/3.60f7fb90.chunk.js.map",
     "index.html": "/project-react/index.html",
-    "precache-manifest.6d514bc94f7170cf52389f33e09ab28c.js": "/project-react/precache-manifest.6d514bc94f7170cf52389f33e09ab28c.js",
+    "precache-manifest.24e4dcf326f947aa6afa4fbdcbc60ada.js": "/project-react/precache-manifest.24e4dcf326f947aa6afa4fbdcbc60ada.js",
     "service-worker.js": "/project-react/service-worker.js",
-    "static/css/main.4184deb2.chunk.css.map": "/project-react/static/css/main.4184deb2.chunk.css.map",
+    "static/css/main.716ee704.chunk.css.map": "/project-react/static/css/main.716ee704.chunk.css.map",
     "static/media/preloader.gif": "/project-react/static/media/preloader.1d7626e6.gif"
   }
 }
